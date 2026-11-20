@@ -65,7 +65,7 @@ def clean(df: pd.DataFrame, report: dict | None = None) -> pd.DataFrame:
     product_price = df.loc[~missing_price].groupby("product")["unit_price"].agg(
         lambda prices: prices.mode().iloc[0]
     )
-    df.loc[missing_price, "unit_price"] = df.loc[missing_price, "product"].map(product_price)
+    df["unit_price"] = df["unit_price"].fillna(df["product"].map(product_price))
 
     # 5. Discount: empty means no discount.
     no_discount = df["discount"] == ""
