@@ -5,8 +5,8 @@
 Requires Python 3.10 or newer.
 
 ```bash
-git clone https://github.com/AleksanderPrzybylski/Recruitment-task.git
-cd Recruitment-task
+git clone https://github.com/AleksanderPrzybylski/Data-cleaning.git
+cd Data-cleaning
 python -m venv .venv
 .venv\Scripts\activate          # Windows (PowerShell)
 # source .venv/bin/activate     # macOS / Linux
